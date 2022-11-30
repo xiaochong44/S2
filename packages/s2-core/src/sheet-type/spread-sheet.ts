@@ -362,6 +362,12 @@ export abstract class SpreadSheet extends EE {
     this.registerIcons();
   }
 
+  public asyncRender(reloadData = true, options: S2RenderOptions = {}) {
+    return this.container.ready.then(() => {
+      this.render(reloadData, options);
+    });
+  }
+
   public render(reloadData = true, options: S2RenderOptions = {}) {
     // 防止表格卸载后, 再次调用 render 函数的报错
     if (!this.getCanvasElement()) {
