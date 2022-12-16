@@ -17,6 +17,7 @@ import {
   type ThemeCfg,
   type TooltipAutoAdjustBoundary,
 } from '@antv/s2';
+import { renderToMountedElement } from '@antv/g2';
 import type { Adaptive, SheetType } from '@antv/s2-shared';
 import corePkg from '@antv/s2/package.json';
 import { useUpdateEffect } from 'ahooks';
@@ -59,6 +60,7 @@ import {
 } from './config';
 import { partDrillDown } from './drill-down';
 import './index.less';
+import { chartOptions, chartSheetDataConfig } from './data';
 
 const { TabPane } = Tabs;
 
@@ -1013,6 +1015,17 @@ function MainLayout() {
                 showTooltip: false,
               },
             }}
+            ref={s2Ref}
+            themeCfg={themeCfg}
+            onMounted={onSheetMounted}
+          />
+        </TabPane>
+        <TabPane tab="图表" key="chart">
+          <SheetComponent
+            sheetType="chart"
+            dataCfg={chartSheetDataConfig}
+            options={chartOptions}
+            renderConfig={{ render: renderToMountedElement }}
             ref={s2Ref}
             themeCfg={themeCfg}
             onMounted={onSheetMounted}
