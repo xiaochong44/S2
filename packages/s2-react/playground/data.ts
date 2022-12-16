@@ -23,9 +23,6 @@ const intake = [
 export const chartOptions: SheetComponentOptions = {
   width: 1000,
   height: 1700,
-  tooltip: {
-    showTooltip: false,
-  },
   interaction: {
     hoverHighlight: false,
     hoverFocus: false,
@@ -58,7 +55,6 @@ const getIntervalOptions = (coordinate: string, shape: string) => {
     type: 'interval',
     data: sold,
     coordinates: [{ type: coordinate }],
-    interactions: [{ type: 'tooltip' }],
     encode: {
       ...commonEncode,
       shape,
@@ -70,8 +66,7 @@ const getLineOptions = (coordinate: string, shape: string) => {
   return {
     type: 'line',
     data: sold,
-    coordinate: [{ type: coordinate }],
-    interactions: [{ type: 'tooltip' }],
+    coordinates: [{ type: coordinate }],
     encode: {
       x: 'genre',
       y: 'sold',
@@ -84,7 +79,7 @@ const getPointOptions = (coordinate: string, shape: string): G2Spec => {
   return {
     type: 'point',
     data: intake,
-    coordinate: [{ type: coordinate }],
+    coordinates: [{ type: coordinate }],
     encode: {
       x: 'x',
       y: 'y',
