@@ -55,6 +55,7 @@ const getIntervalOptions = (coordinate: string, shape: string) => {
     type: 'interval',
     data: sold,
     coordinates: [{ type: coordinate }],
+    interactions: [{ type: 'tooltip' }],
     encode: {
       ...commonEncode,
       shape,
@@ -67,6 +68,7 @@ const getLineOptions = (coordinate: string, shape: string) => {
     type: 'line',
     data: sold,
     coordinates: [{ type: coordinate }],
+    interactions: [{ type: 'tooltip' }],
     encode: {
       x: 'genre',
       y: 'sold',
@@ -80,6 +82,7 @@ const getPointOptions = (coordinate: string, shape: string): G2Spec => {
     type: 'point',
     data: intake,
     coordinates: [{ type: coordinate }],
+    interactions: [{ type: 'tooltip' }],
     encode: {
       x: 'x',
       y: 'y',
@@ -104,7 +107,8 @@ const getAreaOptions = (coordinate: string, shape: string) => {
       { year: '1998', value: 16572 },
       { year: '1999', value: 17765 },
     ],
-    coordinate: [{ type: coordinate }],
+    coordinates: [{ type: coordinate }],
+    interactions: [{ type: 'tooltip' }],
     encode: {
       x: 'year',
       y: 'value',

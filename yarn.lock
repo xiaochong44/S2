@@ -202,10 +202,10 @@
   dependencies:
     "@antv/util" "^3.3.1"
 
-"@antv/g2@5.0.0-beta.4":
-  version "5.0.0-beta.4"
-  resolved "https://registry.npmmirror.com/@antv/g2/-/g2-5.0.0-beta.4.tgz#5987f42217dd1db8b6a8063c717ba1c80b9df6f6"
-  integrity sha512-ZkI6N80ZTk+NT7tsDFeSByfVmkHJdp48c+rpEy0wbDXjeytrDMjtPBCPutB+/Cw4ob0qLs66AF3FA+dWKjVH+A==
+"@antv/g2@5.0.0-beta.5":
+  version "5.0.0-beta.5"
+  resolved "https://registry.npmmirror.com/@antv/g2/-/g2-5.0.0-beta.5.tgz#86e46de7347c0e670b930d219c29e1ad5cdf6084"
+  integrity sha512-zhpqXescLnnZudA/0LrNWe1yksfy+hn7lJEnOc7iKNkz2eYLij+5yoMb1g5bAC5OftAbv8dUEBZFGqbToj6uNw==
   dependencies:
     "@antv/coord" "^0.4.1"
     "@antv/g" "^5.7.4"
